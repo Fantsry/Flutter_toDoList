@@ -10,7 +10,7 @@ Aplikasi Flutter sederhana dengan 2 halaman:
 - Hapus task dengan **swipe (Slidable)**.
 - Navigasi antar halaman (Home ↔ Profile).
 
-## Widget Tree (singkat)
+## Widget Tree
 ```
 MyApp (StatelessWidget)
 └── MaterialApp
