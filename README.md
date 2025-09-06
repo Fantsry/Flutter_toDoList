@@ -11,33 +11,9 @@ Aplikasi Flutter sederhana dengan 2 halaman:
 - Navigasi antar halaman (Home ↔ Profile).
 
 ## Widget Tree (singkat)
-MyApp (StatelessWidget)
-│
-└── MaterialApp
-    │
-    └── HomePage (StatefulWidget)
-        │
-        ├── AppBar
-        │   ├── Text ('To do List')
-        │   └── IconButton (leading: Icon(Icons.person))
-        │
-        ├── Body: ListView.builder
-        │   └── TodoList (for each item in toDoList)
-        │       ├── Slidable
-        │       │   ├── endActionPane: SlidableAction (delete)
-        │       │   └── Container
-        │       │       ├── Row
-        │       │       │   ├── Checkbox
-        │       │       │   └── Text
-        │       │       │
-        │       │       └── (decorations)
-        │       │
-        │       └── (other properties)
-        │
-        └── FloatingActionButton (Row)
-            ├── Expanded: TextField
-            └── FloatingActionButton (with Icon(Icons.add))
-
+MyApp (StatelessWidget) | __ MaterialApp | __ HomePage (StatefulWidget) | __ AppBar | __ Text (To do List) | __ IconButton  
+(leading: Icon(icons.person)) | __ Body: ListView.builder | __ TodoList (for each item in toDoList) | __ Slidable | __ endActionPane:  
+SlidableAction (delete) | __ Container | __ Row | __ Checkbox | __ Text | __ (decorations) | __ (other properties) | __ FloatingActionButton (Row) | __ Expanded: TextField | __ FloatingActionButton (with Icon(icons.add))
 
 ## State Management
 Menggunakan **`setState`** karena:
