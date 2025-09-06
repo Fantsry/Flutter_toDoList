@@ -1,16 +1,35 @@
-# flutter_todolist
+# Flutter ToDo List App
 
-A new Flutter project.
+Aplikasi Flutter sederhana dengan 2 halaman:
+- **HomePage**: Menampilkan daftar ToDo (bisa tambah, centang, hapus).
+- **ProfilePage**: Menampilkan profil statis.
 
-## Getting Started
+## Fitur
+- Tambah task baru (validasi tidak boleh kosong).
+- Checklist task selesai.
+- Hapus task dengan **swipe (Slidable)**.
+- Navigasi antar halaman (Home ↔ Profile).
 
-This project is a starting point for a Flutter application.
+## Widget Tree (singkat)
+MyApp
+└── MaterialApp
+└── HomePage (Stateful)
+├── AppBar (dengan tombol menuju ProfilePage)
+├── ListView.builder → TodoList (custom widget + Slidable)
+└── FloatingActionButton (+ TextField untuk tambah task)
+└── ProfilePage (Stateless)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## State Management
+Menggunakan **`setState`** karena:
+- Sederhana.
+- Cukup untuk aplikasi kecil dengan state lokal (list ToDo).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Slidable
+Paket `flutter_slidable` dipakai untuk membuat task bisa di-**swipe** ke kiri,
+sehingga muncul tombol hapus berwarna merah.  
+Ini membuat interaksi lebih natural dibanding hanya menekan ikon delete.
+
+## Demo
+[Lihat Demo](screenshots/demo.mp4)
+
